@@ -3,7 +3,7 @@
     <label v-if="label" class="ui-input__label-1">
       {{ label }}
     </label>
-
+<--специфичный блок для проекта -->
     <span
       v-if="rules.min && showLimitLabel"
       class="ui-input-info ui-input-info--min"
@@ -18,6 +18,7 @@
     <span v-if="rules.reserv" class="ui-input-info ui-input-info--reserv"
       >{{ $tc('reserve', 1) }}: {{ reserv }}</span
     >
+<--специфичный блок для проекта -->
     <div
       class="d-flex align-center"
       :class="[isTextArea ? 'ui-input__icon--area' : 'ui-input__icon']"
@@ -243,7 +244,7 @@ export default {
       if (this.rules?.regExp) return this.$t('invalid_email');
       if (this.rules?.repeat !== undefined)
         return this.$t('passwords_not_match');
-      // return this.$t('required_field');
+     
     },
     inputVal: {
       get() {
